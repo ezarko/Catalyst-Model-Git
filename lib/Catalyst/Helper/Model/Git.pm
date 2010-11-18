@@ -70,5 +70,11 @@ L<Catalyst::Manual>, L<Catalyst::Helper>, L<Catalyst::Model::Git>
 
     Eric A. Zarko
     CPAN ID: EZARKO
-    eric@zarko.org
-    http://www.zarko.org/
+    ezarko@synacor.com
+
+=head1 LICENSE
+
+        Copyright (c) 2010 the aforementioned authors. All rights
+        reserved. This program is free software; you can redistribute
+        it and/or modify it under the same terms as Perl itself.
+

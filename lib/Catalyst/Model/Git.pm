@@ -158,8 +158,7 @@ L<Catalyst::Manual>, L<Catalyst::Helper>, L<Catalyst::Model::Git::Item>, L<Git::
 
     Eric A. Zarko
     CPAN ID: EZARKO
-    eric@zarko.org
-    http://www.zarko.org/
+    ezarko@synacor.com
 
 =head1 LICENSE
 

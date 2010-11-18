@@ -1,0 +1,11 @@
+Changes
+lib/Catalyst/Helper/Model/Git.pm
+lib/Catalyst/Model/Git.pm
+lib/Catalyst/Model/Git/Item.pm
+LICENSE
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+README
+Todo
+META.yml                                 Module meta-data (added by MakeMaker)

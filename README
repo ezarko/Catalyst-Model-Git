@@ -1,0 +1,79 @@
+NAME
+    Catalyst::Model::Git - Catalyst Model to browse Git repositories
+
+SYNOPSIS
+        # Model
+        __PACKAGE__->config(
+            work_tree => '/path/to/git/working/folder'
+        );
+
+        # Controller
+        sub default : Private {
+            my ($self, $c) = @_;
+            my $path = join('/', $c->req->args);
+
+            $c->stash->{'items'} = MyApp::Model::Git->ls($path);
+
+            $c->stash->{'template'} = 'blog.tt';
+        };
+
+DESCRIPTION
+    This model class uses Git::Repository to access a Git repositry and list
+    items and view their contents. It is currently only a read-only client
+    but may expand to be a full fledged client at a later time.
+
+CONFIG
+    The following configuration options are available:
+
+  work_tree
+    Returns the path to the root of your Git working folder.
+
+    This value comes from the config key 'work_tree'.
+
+  options
+    Returns the options passed to the Git::Repository constructor.
+
+    This value comes from the config key 'options'.
+
+  git_dir
+    Returns the path to the root of your Git index folder.
+
+    This value comes from the config key 'git_dir'.
+
+METHODS
+  cat($path [, $treeish])
+    Returns the contents of the "path" and "treeish" specified. This is the
+    same as calling "Catalyst::Model::Git-"ls($path,
+    $treeish)->[0]->contents()>.
+
+    Note: $path must be a file, not a directory.
+
+  git_dir
+    Returns the git_dir specified in the configuration "git_dir" option.
+
+  ls($path [, $treeish])
+    In a list context, returns an array of Catalyst::Model::Git::Item
+    objects of the "path" and "treeish" specified, each representing an
+    entry in the specified work_tree path. In scalar context, it returns an
+    array reference.
+
+  options
+    Returns the options specified in the configuration "options" option.
+
+  work_tree
+    Returns the work_tree specified in the configuration "work_tree" option.
+
+SEE ALSO
+    Catalyst::Manual, Catalyst::Helper, Catalyst::Model::Git::Item,
+    Git::Repository
+
+AUTHORS
+        Eric A. Zarko
+        CPAN ID: EZARKO
+        ezarko@synacor.com
+
+LICENSE
+            Copyright (c) 2010 the aforementioned authors. All rights
+            reserved. This program is free software; you can redistribute
+            it and/or modify it under the same terms as Perl itself.
+

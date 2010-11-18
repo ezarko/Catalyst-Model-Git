@@ -1,0 +1,19 @@
+--- #YAML:1.0
+name:                Catalyst-Model-Git
+version:             0.1
+abstract:            Catalyst Model to browse Git repositories
+license:             ~
+author:
+    - Eric A. Zarko <ezarko@synacor.com>
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:
+    Catalyst::Devel:               0
+    Catalyst::Runtime:             0
+    DateTime:                      0
+    Git::Repository:               0
+    Path::Class:                   0
+    Scalar::Util:                  0
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
