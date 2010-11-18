@@ -96,7 +96,7 @@ Catalyst::Model::Git - Catalyst Model to browse Git repositories
 
 =head1 DESCRIPTION
 
-This model class uses Git::Repository to access a Git repositry and
+This model class uses Git::Repository to access a Git repository and
 list items and view their contents. It is currently only a read-only
 client but may expand to be a full fledged client at a later time.
 
