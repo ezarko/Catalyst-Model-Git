@@ -15,12 +15,10 @@ __PACKAGE__->mk_ro_accessors(qw( work_tree options git_dir ));
 __PACKAGE__->config();
 
 sub new {
-    my ( $class, @options ) = @_;
+    my $self = shift->next::method(@_);
 
-    my $self = bless {@options}, ref($class) || $class;
-    delete $self->{$_} for grep {!/^(work_tree|options|git_dir)$/} keys %$self;
-
-    die("No configured work_tree") unless $self->work_tree;
+    croak "->config->{work_tree} must be defined for this model"
+        unless $self->{work_tree};
 
     $self->{repo} = Git::Repository->new( %$self );
 

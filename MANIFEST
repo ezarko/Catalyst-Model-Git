@@ -13,6 +13,7 @@ t/lib/TestLib.pm
 t/pod_coverage.t
 t/pod_spelling.t
 t/pod_syntax.t
+t/stress.t
 t/strict.t
 t/warnings.t
 Todo
