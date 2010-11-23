@@ -10,7 +10,7 @@ use Scalar::Util qw( blessed );
 
 use overload '""' => \&stringify, fallback => 1;
 
-our $VERSION = '0.1';
+our $VERSION = '0.01';
 
 sub new {
     my ( $class, @args ) = @_;

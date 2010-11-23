@@ -9,7 +9,7 @@ use Git::Repository;
 use Path::Class qw( dir file );
 use base 'Catalyst::Model';
 
-our $VERSION = '0.1';
+our $VERSION = '0.01';
 
 __PACKAGE__->mk_ro_accessors(qw( work_tree options git_dir ));
 __PACKAGE__->config();

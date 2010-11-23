@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Catalyst-Model-Git
-version:             0.1
+version:             0.01
 abstract:            Catalyst Model to browse Git repositories
 license:             ~
 author:
